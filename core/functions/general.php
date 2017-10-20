@@ -10,3 +10,9 @@ function dd($data) {
 	die(var_dump($data));
 	echo '</pre>';
 }
+
+function render($file){
+    ob_start();
+    include $file;
+    return ob_get_clean();
+  }

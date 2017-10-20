@@ -1,1 +1,7 @@
 DOCS/
+
+*.xml
+
+robots.txt
+
+test.php

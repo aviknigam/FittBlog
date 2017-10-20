@@ -30,11 +30,11 @@ $description = 'Admin Panel';
                 <?php
                     try {
 
-                        $stmt = $conn->query('SELECT postID, postTitle, created_at FROM posts ORDER BY postID DESC');
+                        $stmt = $conn->query('SELECT * FROM posts ORDER BY postID DESC');
                         while($row = $stmt->fetch_assoc()){
                             
                             echo '<tr>';
-                            echo '<td>'.$row['postTitle'].'</td>';
+                            echo '<td><a href="/fitness/' . $row['postSlug']. '">'.$row['postTitle'].'</a></td>';
                             echo '<td>'.date('jS M Y', strtotime($row['created_at'])).'</td>';
                             ?>
 
@@ -53,7 +53,10 @@ $description = 'Admin Panel';
                     }
                 ?>
             </table>
-        
+
+        <!-- Scripts -->
+            <?php include('../includes/scripts.php'); ?>
+            
     </body>
 </html>
 

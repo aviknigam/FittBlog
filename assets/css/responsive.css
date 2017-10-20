@@ -15,7 +15,12 @@
         }
         
         .main-content {
-            padding: 0px 20%;
+            padding: 0px 5% 0px 15%;
+        }
+
+        .trending {
+            margin-top: inherit;
+            padding-left: 5%;
         }
     }
 

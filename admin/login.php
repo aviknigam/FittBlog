@@ -8,3 +8,6 @@ require __DIR__ . '/../core/init.php';
     <p><label>Password</label><input type="password" name="password" value=""  /></p>
     <p><label></label><input type="submit" name="submit" value="Login"  /></p>
 </form>
+
+		<!-- Scripts -->
+        <?php include('../includes/scripts.php'); ?>

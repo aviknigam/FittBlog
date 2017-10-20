@@ -12,7 +12,7 @@ body {
 }
 
 .nav-logo {
-	height: 75px;
+	height: 70px;
 }
 
 /* Main Content */
@@ -30,16 +30,6 @@ body {
 	text-align: center;	
 }
 
-/* Blog Posts */
-.blogHeading {
-	font-size: 42px; 
-	color: #2f2c2c; 
-	font-weight: 400;
-	margin: 0px;
-}
-	
-.blogParagraph, .blogList {
-	font-size: 20px; 
-	color: #2B2B2B;
-	line-height: 36px;
+.trending {
+	margin-top: 20px;
 }
