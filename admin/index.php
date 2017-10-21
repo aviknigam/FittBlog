@@ -18,7 +18,7 @@ $description = 'Admin Panel';
 			<?php include('../includes/navbar.php'); ?>
         
         <!-- Main Content -->
-            <a class="nav-link" href="/admin/add-post">Add Post</a>
+            <a href="/admin/add-post">Add Post</a> | <a href="/admin/sitemap-gen">Sitemap Generator</a>
 
         <!-- Table of Posts -->
             <table class="table table-striped">
