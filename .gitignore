@@ -1,5 +1,7 @@
 DOCS/
 
+.vscode/
+
 *.xml
 
 robots.txt
