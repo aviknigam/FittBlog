@@ -39,9 +39,9 @@ if(empty($row['postImage'])) {
 
 // Check updated vs created date
 if($row['updated_at'] > $row['created_at']) {
-    $date_updated = "Updated: " . date('jS F Y', strtotime($row['updated_at']));
+    $date_post = "Published: " .date('jS F Y', strtotime($row['created_at'])). " | Updated: " . date('jS F Y', strtotime($row['updated_at']));
 } else {
-    $date_created = "Published on: " .date('jS F Y', strtotime($row['created_at']));
+    $date_post = "Published: " .date('jS F Y', strtotime($row['created_at']));
 }
 // if (date('jS F Y', strtotime($row['updated_at'])) > date('jS F Y', strtotime($row['created_at']))) {
 //     $date_posted_updated = 'Updated';
@@ -74,7 +74,7 @@ if($row['updated_at'] > $row['created_at']) {
                     <!-- MAIN POST -->
                         <div class="col-md-8">
                             <h1 class="heading"><?= $title ?></h1>
-                            <div class="mt-4"><?= $date_created; "<br/>"; $date_updated ?></div>
+                            <div class="mt-4"><?= $date_post; "<br/>"; ?></div>
                             <div class="addthis_inline_share_toolbox mt-4"></div>
                             <?php if(empty($row['postImage'])) { echo "<img class='img-fluid mt-4' src='/assets/images/$row[postID].jpg'>"; } ?>
                             
