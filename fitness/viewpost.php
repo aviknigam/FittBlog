@@ -38,9 +38,10 @@ if(empty($row['postImage'])) {
 
 
 // Check updated vs created date
-$date_created = "Published on: " .date('jS F Y', strtotime($row['created_at']));
 if($row['updated_at'] > $row['created_at']) {
     $date_updated = "Updated: " . date('jS F Y', strtotime($row['updated_at']));
+} else {
+    $date_created = "Published on: " .date('jS F Y', strtotime($row['created_at']));
 }
 // if (date('jS F Y', strtotime($row['updated_at'])) > date('jS F Y', strtotime($row['created_at']))) {
 //     $date_posted_updated = 'Updated';
