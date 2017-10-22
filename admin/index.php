@@ -16,6 +16,30 @@ $description = 'Admin Panel';
 	<body>
 		<!-- Navigation -->
 			<?php include('../includes/navbar.php'); ?>
+
+        <!-- ADMIN LOGIN -->
+            <?php 
+                if (!isset($_SESSION['admin'])) {
+                    echo '
+                        <div class="new-section d-flex justify-content-center">
+                            <form class="d-flex flex-column justify-content-cente def-size" action="/admin/login.php" method="post">
+                                <div class="input-field">
+                                    <i class="fa fa-envelope fa-fw mr-2" ></i>
+                                    <input type="email" name="email" size="25" placeholder="Email" required>
+                                </div>
+                                <div class="input-field">
+                                    <i class="fa fa-lock fa-fw mr-2"></i>
+                                    <input type="password" name="password" size="25" placeholder="Password" required>
+                                </div>';
+                                // include 'includes/recaptcha.php';
+                                echo '<button type="submit" class="btn btn-primary">Login</button>
+                            </form> 
+                        </div>
+                    ';
+
+                    die();
+                }
+            ?>
         
         <!-- Main Content -->
             <a href="/admin/add-post">Add Post</a> | <a href="/admin/sitemap-gen">Sitemap Generator</a>
