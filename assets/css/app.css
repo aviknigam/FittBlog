@@ -7,11 +7,13 @@ body {
 }
 
 /* Navbar */
-.navbar {
-	padding-left: 0px; 
+.bs-nav {
+	display: flex;
+	justify-content: center;
+	margin: 10px auto 5% auto; 
 }
 
-.nav-logo {
+.nav-bs-logo {
 	height: 70px;
 }
 

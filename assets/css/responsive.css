@@ -2,38 +2,38 @@
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
-    @media (min-width: 576px) {
-        .nav-logo {
-            height: 90px;
-        }
-    }
+	@media (min-width: 576px) {
+		.main-post-content {
+			padding: 0 20%;
+		}
+
+		.nav-bs-logo {
+			height: 90px;
+		}
+	}
 
 /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 768px) {
-        .navbar-brand {
-            margin-left: 10%;
-        }
-        
-        .main-content {
-            padding: 0px 5% 0px 15%;
-        }
+	@media (min-width: 768px) {
+		.main-content {
+			padding: 0px 5% 0px 15%;
+		}
 
-        .trending {
-            margin-top: inherit;
-            padding-left: 5%;
-        }
-    }
+		.trending {
+			margin-top: inherit;
+			padding-left: 5%;
+		}
+	}
 
 /* Large devices (desktops, 992px and up) */
-    @media (min-width: 992px) {
-        .nav-logo {
-            height: 100px;
-        }
-    }
+	@media (min-width: 992px) {
+		.nav-bs-logo {
+			height: 100px;
+		}
+	}
 
 /* Extra large devices (large desktops, 1200px and up) */
-    @media (min-width: 1200px) {
-        .navbar-brand{
-            margin-left: 20%;
-        }
-    }
+	@media (min-width: 1200px) {
+		.navbar-bs-brand {
+			margin-left: 20%;
+		}
+	}
