@@ -21,7 +21,6 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>-->
     </div>
--->
 
 
 
@@ -32,6 +31,15 @@
 
 
 <?php
+require __DIR__ . '/core/init.php';
+$stmt_name = 'Avik Nigam';
+$stmt_email = 'business.aviknigam@gmail.com';
+$encrypted_password = password_hash('Runescaper1', PASSWORD_DEFAULT);
+
+$stmt_sql_reg_user = $conn->prepare("INSERT INTO `users` (name, email, password) VALUES (?, ?, ?)");
+$stmt_sql_reg_user->bind_param("sss", $stmt_name, $stmt_email, $encrypted_password);
+$stmt_sql_reg_user->execute();
+$reg_user = $stmt_sql_reg_user->get_result();
 
 // error_reporting(E_ALL);
 // ini_set('display_errors', true);
