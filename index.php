@@ -3,7 +3,7 @@
 require __DIR__ . '/core/init.php';
 
 $title = 'Daily Health and Fitness Stories!';
-$description = "Updated daily, follow us on Facebook and Instagram and allow us to help transform lives!";
+$description = "Health and fitness stories from around the world. Inspirational workouts, weight transformations and gym routines explained. Updated daily, follow us on Facebook and Instagram and allow us to help transform lives!";
 ?>
 
 <!DOCTYPE html>
