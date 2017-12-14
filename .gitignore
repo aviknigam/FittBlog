@@ -7,3 +7,5 @@ DOCS/
 robots.txt
 
 test.php
+
+core/database/connect.php
