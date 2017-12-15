@@ -3,37 +3,31 @@
 
 /* Small devices (landscape phones, 576px and up) */
 	@media (min-width: 576px) {
-		.main-post-content {
-			padding: 0 20%;
+		.fb-nav {
+			justify-content: flex-start;
+			padding-left: 5%;
 		}
 
-		.nav-bs-logo {
+		.fb-nav-logo {
 			height: 90px;
 		}
 	}
-
+	
 /* Medium devices (tablets, 768px and up) */
 	@media (min-width: 768px) {
-		.main-content {
-			padding: 0px 5% 0px 15%;
-		}
-
-		.trending {
+		.fb-trending {
 			margin-top: inherit;
-			padding-left: 5%;
 		}
 	}
 
 /* Large devices (desktops, 992px and up) */
 	@media (min-width: 992px) {
-		.nav-bs-logo {
+		/* .fb-nav-logo {
 			height: 100px;
-		}
+		} */
 	}
 
 /* Extra large devices (large desktops, 1200px and up) */
 	@media (min-width: 1200px) {
-		.navbar-bs-brand {
-			margin-left: 20%;
-		}
+		
 	}

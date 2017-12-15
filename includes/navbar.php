@@ -1,5 +1,5 @@
-<div class="bs-nav">
-    <a class="nav-bs-brand" href="/">
-        <img class="nav-bs-logo" src="/assets/images/logo.png" alt="FITTBLOG">
+<div class="fb-nav flex">
+    <a href="/">
+        <img class="fb-nav-logo" src="/assets/images/logo.png" alt="FITTBLOG">
     </a>
 </div>

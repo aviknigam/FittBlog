@@ -1,37 +1,82 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
-/* Body */
+/* General */
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
 body {
+	background: #f8f9fa;
 	font-family: "Varela Round", Arial, "Helvetica Neue", Helvetica, serif;
 	font-size: 16px;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+.flex {
+	display: flex;
 }
 
 /* Navbar */
-.bs-nav {
-	display: flex;
+.fb-nav {
+	border-bottom: 8px solid #ff9800;
 	justify-content: center;
-	margin: 10px auto 5% auto; 
+	margin-top: 10px;
 }
 
-.nav-bs-logo {
-	height: 70px;
+.fb-nav-logo {
+	height: 80px;
 }
 
-/* Main Content */
-/* .container {
-	max-width: 1280px;
-} */
+/* Content */
+	.fb-container {
+		background: #e9ebee;
+		min-height: 100%;
+	}
+	
+	.fb-sidebar {
+		background: #111;
+		flex: 0 0 100px;
+	}
 
-.main-content {
-	margin-top: 1rem;
-	padding: 0px;
-}
+	.fb-content {
+		display: flex;
+		flex-flow: column wrap;
+		align-items: flex-start;
+		height: 100vw;
+		padding: 4rem;
+	}
 
-.heading {
-	color: #2baad8;
-	text-align: center;	
-}
+	.fb-heading {
+	}
 
-.trending {
-	margin-top: 20px;
-}
+/* Cards */
+	.fb-card {
+		background: #f8f9fa;
+		background-clip: border-box;
+		border: 1px solid rgba(0, 0, 0, 0.125);
+		border-radius: .25rem;
+		/* float: left; */
+		width: 33%;
+	}
+
+	.fb-card img {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.fb-card-body {
+		padding: 1.25rem;
+	}
+
+	.fb-card-title {
+		margin-bottom: .75rem;
+	}
