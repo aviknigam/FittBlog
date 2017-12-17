@@ -1,7 +1,14 @@
 <div class="fb-container flex">
     <!-- Sidebar -->
         <div class="fb-sidebar flex">
-            
+            <div class="fb-sidebar-links flex">
+                <p>Follow us on </p>
+                <a href="https://www.instagram.com/aviknigam/"><i class="fab fa-instagram fa-3x flex"></i></a>
+                <a href="https://www.instagram.com/aviknigam/"><i class="fab fa-facebook-square fa-3x flex"></i></a>
+                <a href="/fitness">Fitness</a>
+                <a href="/health">Health</a>
+                <a href="/nutrition">Nutrition</a>
+            </div>
         </div>
 
     <!-- Main Content -->

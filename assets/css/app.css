@@ -27,9 +27,11 @@ a {
 
 /* Navbar */
 .fb-nav {
+	background: #FFF;
 	border-bottom: 8px solid #ff9800;
 	justify-content: center;
-	margin-top: 10px;
+	padding-top: 10px;
+
 }
 
 .fb-nav-logo {
@@ -60,11 +62,10 @@ a {
 	}
 
 	.fb-posts {
-		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-around;
 		height: 100%;
-		padding: 0px;
+		padding: 0;
 	}
 
 
@@ -74,7 +75,7 @@ a {
 		background-clip: border-box;
 		border: 1px solid rgba(0, 0, 0, 0.125);
 		border-radius: .25rem;
-		float: left;
+		box-shadow: 0 10px 20px #00000030, 0 6px 6px #0000003b;
 		height: 450px;
 		margin-bottom: 15px;
 		overflow: hidden;
