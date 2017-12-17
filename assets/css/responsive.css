@@ -35,21 +35,30 @@
 
 		.fb-sidebar {
 			background: #111;
+			color: #FFF;
 			display: block;
 			height: 100%;
 			position: fixed;
 			width: 125px;
 		}
 		
-		.fb-sidebar-links {
-			color: #FFF;
-			flex-flow: column wrap;
-			align-items: center;
+		.fb-sidebar ul {
+			list-style: none;
+			padding: 15px 0;
 		}
 
-		.fb-sidebar-links a {
-			margin-bottom: 20px;
-			overflow-y: scroll;
+		.fb-sidebar ul li {
+			text-align: center;			
+		}
+
+		.fb-sidebar ul li a {
+			display: block;
+			padding: 15px 0;
+		}
+
+		.fb-sidebar-links a:hover {
+			background: #2baad8;
+			color: #fff;
 		}
 		
 		.fb-main-content {
