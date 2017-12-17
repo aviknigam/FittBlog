@@ -3,18 +3,34 @@
 
 /* Small devices (landscape phones, 576px and up) */
 	@media (min-width: 576px) {
-		.fb-nav {
-			justify-content: flex-start;
-			padding-left: 5%;
-		}
-
 		.fb-nav-logo {
 			height: 90px;
+			padding-left: 110px;
+		}
+
+		.fb-sidebar {
+			display: block;
+			background: #111;
+			flex: 0 0 100px;
+		}
+
+		.fb-card {
+			height: 550px;
+			width: 32%;
+		}
+
+		.fb-card img {
+			height: 300px;
 		}
 	}
 	
 /* Medium devices (tablets, 768px and up) */
 	@media (min-width: 768px) {
+		.fb-posts {
+			/* justify-content: space-between; */
+			padding: 0 2rem;
+		}
+		
 		.fb-trending {
 			margin-top: inherit;
 		}
@@ -22,12 +38,26 @@
 
 /* Large devices (desktops, 992px and up) */
 	@media (min-width: 992px) {
-		/* .fb-nav-logo {
+		.fb-nav-logo {
 			height: 100px;
-		} */
+		}
+		
+		.fb-posts {
+			justify-content: space-around;
+			padding: 0 4rem;			
+		}
+
+		.fb-card {
+			height: 500px;
+			width: 29%;
+		}
+
 	}
 
 /* Extra large devices (large desktops, 1200px and up) */
 	@media (min-width: 1200px) {
-		
+		.fb-posts {
+			justify-content: space-around;
+			padding: 0 6rem;			
+		}
 	}

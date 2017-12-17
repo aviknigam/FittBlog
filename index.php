@@ -41,7 +41,6 @@ $description = "Health and fitness stories from around the world. Inspirational 
 		
 		<!-- Scripts -->
 			<?php include('includes/scripts.php'); ?>
-		
 	</body>
 </html>
 

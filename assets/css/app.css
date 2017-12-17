@@ -17,6 +17,7 @@ body {
 }
 
 a {
+	color: inherit;
 	text-decoration: none;
 }
 
@@ -42,20 +43,30 @@ a {
 	}
 	
 	.fb-sidebar {
-		background: #111;
-		flex: 0 0 100px;
+		display: none;
 	}
 
-	.fb-content {
-		display: flex;
-		flex-flow: column wrap;
-		align-items: flex-start;
-		height: 100vw;
-		padding: 4rem;
+	.fb-main-content {
+		flex: 1;
+		flex-direction: column;
 	}
-
+	
 	.fb-heading {
+		background: #2baad8;
+		color: #ffffff;
+		height: 100px;
+		align-items: center;
+		justify-content: center;
 	}
+
+	.fb-posts {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		height: 100%;
+		padding: 0px;
+	}
+
 
 /* Cards */
 	.fb-card {
@@ -63,20 +74,26 @@ a {
 		background-clip: border-box;
 		border: 1px solid rgba(0, 0, 0, 0.125);
 		border-radius: .25rem;
-		/* float: left; */
-		width: 33%;
+		float: left;
+		height: 450px;
+		margin-bottom: 15px;
+		overflow: hidden;
+		width: 49%;
 	}
 
 	.fb-card img {
 		display: block;
 		margin: 0 auto;
+		height: 200px;
 		width: 100%;
 	}
 
 	.fb-card-body {
-		padding: 1.25rem;
+		margin: 0px;
+		padding: 0 5px;
 	}
 
 	.fb-card-title {
-		margin-bottom: .75rem;
+		color: #2baad8;
+		margin: .75rem auto;
 	}
