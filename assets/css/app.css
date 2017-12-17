@@ -56,7 +56,8 @@ a {
 	.fb-heading {
 		background: #2baad8;
 		color: #ffffff;
-		height: 100px;
+		padding: 30px 0;
+		text-align: center;
 		align-items: center;
 		justify-content: center;
 	}

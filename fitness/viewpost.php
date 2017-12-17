@@ -43,13 +43,6 @@ if($row['updated_at'] > $row['created_at']) {
 } else {
     $date_post = "Published: " .date('jS F Y', strtotime($row['created_at']));
 }
-// if (date('jS F Y', strtotime($row['updated_at'])) > date('jS F Y', strtotime($row['created_at']))) {
-//     $date_posted_updated = 'Updated';
-//     $date = date('jS F Y', strtotime($row['updated_at']));
-// } else {
-//     $date_posted_updated = 'Posted';
-//     $date = date('jS F Y', strtotime($row['created_at']));
-// }
 
 // ----------- GENERAL WEBPAGE ------------------------------
 ?>
@@ -62,26 +55,30 @@ if($row['updated_at'] > $row['created_at']) {
     </head>
     
     <body>
-        <?php include '../includes/navbar.php'; ?>
+        <!-- Navbar -->
+            <?php include '../includes/navbar.php'; ?>
         
-        <!-- Main Content -->
-            <div class="container-fluid main-post-content">
-                <div class="row">
-                    <div class="col-md-2">
+        <div class="fb-container flex">
+            <!-- Sidebar -->
+                <?php include '../includes/sidebar.php'; ?>
+        
+            <!-- Main Content -->
+                <div class="fb-main-content flex">
+                    <h1 class="fb-heading flex"><?= $title ?></h1>
 
-                    </div>
+                    <div class="fb-viewpost">
+                        <span><?= $date_post; "<br/>"; ?></span>
+                        <div class="addthis_inline_share_toolbox mt-4"></div>
 
-                    <!-- MAIN POST -->
-                        <div class="col-md-8">
-                            <h1 class="heading"><?= $title ?></h1>
-                            <div class="mt-4"><?= $date_post; "<br/>"; ?></div>
-                            <div class="addthis_inline_share_toolbox mt-4"></div>
+                        <!-- Image -->
                             <?php if(empty($row['postImage'])) { echo "<img class='img-fluid mt-4' src='/assets/images/$row[postID].jpg'>"; } ?>
-                            
+                        
+                        <!-- Initial Advertisement -->
                             <div class="mt-4">
                                 <?php include '../includes/ads-responsive.php'; ?> 
                             </div>
 
+                        <!-- Post Content -->
                             <div class="post-content mt-4">
                                 <?php
                                     $postAd_get = file_get_contents('../includes/ads-responsive.php');
@@ -89,19 +86,25 @@ if($row['updated_at'] > $row['created_at']) {
                                     echo $main_post;
                                 ?>
                             </div>
-                            <div class="addthis_inline_share_toolbox mt-2"></div>
-                            <div class="mt-4">
-                                <?php include '../includes/ads-responsive.php'; ?> 
-                            </div>
-                            <a class="btn btn-primary" href="/" role="button">Go Back</a>
+
+                        <div class="addthis_inline_share_toolbox mt-4"></div>
+                        <div class="mt-4">
+                            <?php include '../includes/ads-responsive.php'; ?> 
                         </div>
-
-                    <!-- ADS -->
-                    <div class="col-md-2">
-
                     </div>
+
+                    <!-- Navigation -->
+                    <div class="post-nav flex mt-4">
+                        <!-- <a class="btn btn-primary" href="/" role="button">Go Back</a> -->
+                        <?php 
+                        $next_post = $conn->query("SELECT * FROM posts WHERE postID < $row[postID] ORDER BY postID DESC LIMIT 1");
+                        $row = $next_post->fetch_assoc();
+                        ?>
+                        <a class="btn flex" <?="href='/" .$row['postCategory']. "/" .$row['postSlug']. "'";?>>Next Post <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    
+                    
                 </div>
-            </div>
 
         <!-- Scripts -->
             <?php include('../includes/scripts.php'); ?>
