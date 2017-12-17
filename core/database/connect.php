@@ -1,8 +1,7 @@
 <?php
 
-$conn = mysqli_connect("198.74.60.210", "root", "", "fitness");
+$conn = mysqli_connect("localhost", "root", "", "fitness");
 
-//  198.74.60.210
 // Custom Error Message when downtime
 
 if (!$conn) {
