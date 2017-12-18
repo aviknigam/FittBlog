@@ -57,6 +57,7 @@ p, ul {
 
 .post-nav {
 	justify-content: center;
+	align-items: center;
 }
 
 .post-nav .btn {
@@ -70,5 +71,4 @@ p, ul {
 	line-height: 1.3333333;
 	padding: 10px 16px;
 	text-align: center;
-	width: 100%;
 }
