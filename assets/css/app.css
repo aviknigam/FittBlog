@@ -25,6 +25,10 @@ a {
 	display: flex;
 }
 
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
 /* Navbar */
 .fb-nav {
 	background: #FFF;

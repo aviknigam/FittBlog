@@ -18,8 +18,8 @@ $description = "Health and fitness stories from around the world. Inspirational 
 				<meta property="og:url" content="https://www.fittblog.com">
 				<meta property="og:image" content="https://www.fittblog.com/assets/images/cover.png" />
 				<meta property="og:description" content="Updated daily, follow us on Facebook and Instagram and allow us to help transform lives!">
-				<meta property="article:publisher" content="https://www.facebook.com/pg/FittBlog-2028556034045030" />
-				<meta property="article:author" content="https://www.facebook.com/pg/FittBlog-2028556034045030" />
+				<meta property="article:publisher" content="https://www.facebook.com/FittnessBlog/" />
+				<meta property="article:author" content="https://www.facebook.com/FittnessBlog/" />
 
 			<!-- Twitter Summary Card -->
 				<meta name="twitter:card" content="summary" />
@@ -61,7 +61,7 @@ $description = "Health and fitness stories from around the world. Inspirational 
 											"</a>
 											<div class='fb-card-body'>
 												<h4 class='fb-card-title'><a href='/$row[postCategory]/$row[postSlug]'>$row[postTitle]</a></h4>
-												<p class='fb-card-text'>" .substr($row['postDescription'], 0, 110) ."...</p>
+												<p class='fb-card-text'>" .substr($row['postDescription'], 0, 110). "...</p>
 												<a href='/$row[postCategory]/$row[postSlug]'><u>Read more...</u></a>
 											</div>
 										</div>";

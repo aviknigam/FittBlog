@@ -1,7 +1,11 @@
 <?php
 require __DIR__ . '/../core/init.php';
 
-// Check Logged in status
+//If not logged in redirect to login page
+
+if (!isset($_SESSION['admin'])) {
+	header('Location: ./');
+}
 
 // Variables Set
 $title = 'Edit Post';

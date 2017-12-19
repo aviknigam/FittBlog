@@ -15,14 +15,14 @@
 <meta name="author" content="FittBlog" />
 
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98969303-2"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98969303-2"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments)};
     gtag('js', new Date());
 
     gtag('config', 'UA-98969303-2');
-</script>
+</script> -->
 
 <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">

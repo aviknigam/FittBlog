@@ -1,8 +1,11 @@
 <?php
 require __DIR__ . '/../core/init.php';
 
-//if not logged in redirect to login page
-// if(!$user->is_logged_in()){ header('Location: login.php'); }
+//If not logged in redirect to login page
+
+if (!isset($_SESSION['admin'])) {
+	header('Location: ./');
+}
 
 // Variables Set
 $title = 'Admin Panel';
