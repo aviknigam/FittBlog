@@ -70,8 +70,13 @@ if($row['updated_at'] > $row['created_at']) {
                             <div class="addthis_inline_share_toolbox mt-4"></div>
 
                             <!-- Image -->
-                                <?php if(empty($row['postImage'])) { echo "<img class='img-fluid mt-4' src='/assets/images/$row[postID].jpg'>"; } ?>
-                            
+                                <?php 
+                                    if(empty($row['postImage'])) {
+                                        echo "<img class='img-fluid mt-4' src='/assets/images/$row[postID].jpg'>";
+                                    } else {
+                                        echo "<img class='img-fluid mt-4' src='$row[postImage]'>";
+                                    }
+                                ?>
                             <!-- Initial Advertisement -->
                                 <div class="mt-4">
                                     <?php include 'ads-responsive.php'; ?> 
