@@ -14,6 +14,10 @@
         padding-bottom: 10px;
     }
 
+    .fb-submit {
+        
+    }
+
 /* Admin Links */
     .fb-admin-links {
         flex-flow: row wrap;
@@ -58,3 +62,20 @@
         border-top: 1px solid #eceeef;
         padding: .75rem;
     }
+
+/*********** ADD POST **********/
+.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid transparent;
+    border-color: #f5c6cb;
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: .75rem 1.25rem;
+    position: relative;
+}
+
+.fb-form-group {
+    margin-bottom: 10px;
+}

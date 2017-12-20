@@ -39,7 +39,7 @@ $description = 'Admin Panel';
 												<input type="password" name="password" size="25" placeholder="Password" required>
 											</div>';
 											// include 'includes/recaptcha.php';
-											echo '<button type="submit" class="aa">Login</button>
+											echo '<button type="submit" class="fb-submit">Login</button>
 										</form> 
 									';
 

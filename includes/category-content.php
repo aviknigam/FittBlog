@@ -79,6 +79,7 @@
   </div>
   <div class="middle">
     <h1>Coming Soon</h1>
+    <p><a style="text-decoration: none; color: white;" href="/">go back?</a></p>
     <hr>
   </div>
   <div class="bottomleft">
