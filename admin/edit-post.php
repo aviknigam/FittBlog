@@ -145,7 +145,7 @@ $description = 'Edit Post';
 									<input type='text' id="postImage" class="fb-form-field"  name="postImage" value="<?php if(isset($error)){ echo $_POST['postImage'];} else { echo $row['postImage'];}?>">
 								</div>
 								<input type="file" name="postImage" id="postImage" />
-								<input type="submit" class="btn btn-primary" name="Submit" value="Submit">
+								<input type="submit" class="fb-submit" name="submit" value="submit">
 							</form>
 					</div>
 			</div>

@@ -30,7 +30,7 @@ $description = 'Admin Panel';
 								if (!isset($_SESSION['admin'])) {
 									echo '
 										<form class="fb-login-form flex" action="/admin/login.php" method="post">
-											<div class="form-field flex">
+											<div class="fb-form-field flex">
 												<i class="fas fa-envelope fa-fw fa-2x"></i>
 												<input type="email" name="email" size="25" placeholder="Email" required>
 											</div>
