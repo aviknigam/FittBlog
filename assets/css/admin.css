@@ -11,7 +11,7 @@
 
     .fb-form-field {
         align-items: center;
-        padding-bottom: 10px;
+        width: 30%;
     }
 
     .fb-submit {
