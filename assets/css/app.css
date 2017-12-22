@@ -30,74 +30,8 @@ a {
 }
 
 /* Navbar */
-.fb-nav {
-	background: #FFF;
-	border-bottom: 8px solid #ff9800;
-	justify-content: center;
-	padding-top: 10px;
-
-}
-
-.fb-nav-logo {
-	height: 80px;
-}
 
 /* Content */
-	.fb-container {
-		background: #e9ebee;
-		min-height: 100%;
-	}
 	
-	.fb-sidebar {
-		display: none;
-	}
-
-	.fb-main-content {
-		flex: 1;
-		flex-direction: column;
-	}
-	
-	.fb-heading {
-		background: #2baad8;
-		color: #ffffff;
-		padding: 30px 0;
-		text-align: center;
-	}
-
-	.fb-posts {
-		flex-flow: row wrap;
-		justify-content: space-around;
-		height: 100%;
-		padding: 0;
-	}
-
-
 /* Cards */
-	.fb-card {
-		background: #f8f9fa;
-		background-clip: border-box;
-		border: 1px solid rgba(0, 0, 0, 0.125);
-		border-radius: .25rem;
-		box-shadow: 0 10px 20px #00000030, 0 6px 6px #0000003b;
-		height: 450px;
-		margin-bottom: 15px;
-		overflow: hidden;
-		width: 49%;
-	}
-
-	.fb-card img {
-		display: block;
-		margin: 0 auto;
-		height: 200px;
-		width: 100%;
-	}
-
-	.fb-card-body {
-		margin: 0px;
-		padding: 0 5px;
-	}
-
-	.fb-card-title {
-		color: #2baad8;
-		margin: .75rem auto;
-	}
+	
