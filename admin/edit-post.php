@@ -21,20 +21,18 @@ $description = 'Edit Post';
 	</head>
 
 	<body>
-		<!-- Navigation -->
-			<?php include('../includes/navbar.php'); ?>
+		<!-- Main Content -->
+			<div class="container">
+		
+				<!-- Navbar -->
+					<?php include('../includes/navbar.php'); ?>
 
-		<!-- Container -->
-			<div class="fb-container admin-section flex">
-				<!-- Sidebar -->
-					<?php include('../includes/sidebar.php'); ?>
-			
-				<!-- Main Content -->
-					<div class="fb-main-content flex mt-4">   
+				<!-- Content -->
+					<div>      
 
 						<a href="./" style="text-align: center;">Admin Index</a>
 
-						<h1 class="fb-heading">Edit Post</h2>
+						<h1 class="heading">Edit Post</h2>
 
 						<?php
 							// GET URL with sanitized statement
@@ -116,36 +114,36 @@ $description = 'Edit Post';
 						<!-- Form -->
 							<?php $row = $stmt1->fetch_assoc(); ?>
 							<form action='' method="POST" enctype="multipart/form-data">
-								<div class="fb-form-group">
+								<div class="form-group">
 									<label for="postTitle">Title</label>
-									<input type='text' id="postTitle" class="fb-form-field" name="postTitle" value="<?php if(isset($error)){ echo $_POST['postTitle'];} else { echo $row['postTitle'];}?>">
+									<input type='text' id="postTitle" class="form-field" name="postTitle" value="<?php if(isset($error)){ echo $_POST['postTitle'];} else { echo $row['postTitle'];}?>">
 								</div>
-								<div class="fb-form-group">
+								<div class="form-group">
 									<label for="postSlug">Slug</label>
-									<input type='text' id="postSlug" class="fb-form-field" name="postSlug" value="<?php if(isset($error)){ echo $_POST['postSlug'];} else { echo $row['postSlug'];}?>">
+									<input type='text' id="postSlug" class="form-field" name="postSlug" value="<?php if(isset($error)){ echo $_POST['postSlug'];} else { echo $row['postSlug'];}?>">
 								</div>
-								<div class="fb-form-group">
+								<div class="form-group">
 									<label for="postDescription">Description</label><br />
-									<textarea id="postDescription" class="fb-form-field" name="postDescription" rows='3'><?php if(isset($error)){ echo $_POST['postDescription'];} else { echo $row['postDescription'];}?></textarea>
+									<input  type="text" class="form-field" id="postDescription" name="postDescription" value='<?php if(isset($error)){ echo $_POST['postDescription'];} else { echo $row['postDescription'];}?>'>
 								</div>
-								<div class="fb-form-group">
+								<div class="form-group">
 									<label for="postContent">Content</label><br />
-									<textarea id="postContent" class="fb-form-field editor" name="postContent"  rows='25'><?php if(isset($error)){ echo $_POST['postContent'];} else { echo $row['postContent'];}?></textarea>
+									<textarea id="postContent" class="form-field editor" name="postContent"  rows='25'><?php if(isset($error)){ echo $_POST['postContent'];} else { echo $row['postContent'];}?></textarea>
 								</div>
-								<div class="fb-form-group">
+								<div class="form-group">
 									<label for="postCategory">Category</label>
-									<input type='text' id="postCategory" class="fb-form-field"  name="postCategory" value="<?php if(isset($error)){ echo $_POST['postCategory'];} else { echo $row['postCategory'];}?>">
+									<input type='text' id="postCategory" class="form-field"  name="postCategory" value="<?php if(isset($error)){ echo $_POST['postCategory'];} else { echo $row['postCategory'];}?>">
 								</div>
-								<div class="fb-form-group">
+								<div class="form-group">
 									<label for="postTags">Tags</label>
-									<input type='text' id="postTags" class="fb-form-field"  name="postTags" value="<?php if(isset($error)){ echo $_POST['postTags'];} else { echo $row['postTags'];}?>">
+									<input type='text' id="postTags" class="form-field"  name="postTags" value="<?php if(isset($error)){ echo $_POST['postTags'];} else { echo $row['postTags'];}?>">
 								</div>
-								<div class="fb-form-group">
+								<div class="form-group">
 									<label for="postImage">Image URL (optional)</label>
-									<input type='text' id="postImage" class="fb-form-field"  name="postImage" value="<?php if(isset($error)){ echo $_POST['postImage'];} else { echo $row['postImage'];}?>">
+									<input type='text' id="postImage" class="form-field"  name="postImage" value="<?php if(isset($error)){ echo $_POST['postImage'];} else { echo $row['postImage'];}?>">
 								</div>
 								<input type="file" name="postImage" id="postImage" />
-								<input type="submit" class="fb-submit" name="submit" value="submit">
+								<input type="submit" class="submit" name="submit" value="submit">
 							</form>
 					</div>
 			</div>

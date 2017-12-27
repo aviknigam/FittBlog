@@ -15,31 +15,28 @@ $description = 'Admin Panel';
 	</head>
 
 	<body>
-		<!-- Navigation -->
-			<?php include('../includes/navbar.php'); ?>
+		<!-- Main Content -->
+			<div class="container">
+				<!-- Navbar -->
+					<?php include('../includes/navbar.php'); ?>
 
-		<!-- Container -->
-			<div class="fb-container flex">
-				<!-- Sidebar -->
-					<?php include('../includes/sidebar.php'); ?>
-			
-				<!-- Main Content -->
-					<div class="fb-main-content admin-section flex">           
+				<!-- Content -->
+					<div class="admin flex">           
 						<!-- ADMIN LOGIN -->
 							<?php 
 								if (!isset($_SESSION['admin'])) {
 									echo '
-										<form class="fb-login-form flex" action="/admin/login.php" method="post">
-											<div class="fb-form-field flex">
+										<form class="login-form flex" action="/admin/login.php" method="post">
+											<div class="form-field flex">
 												<i class="fas fa-envelope fa-fw fa-2x"></i>
 												<input type="email" name="email" size="25" placeholder="Email" required>
 											</div>
-											<div class="fb-form-field flex">
+											<div class="form-field flex">
 												<i class="fas fa-lock fa-fw fa-2x"></i>
 												<input type="password" name="password" size="25" placeholder="Password" required>
 											</div>';
 											// include 'includes/recaptcha.php';
-											echo '<button type="submit" class="fb-submit">Login</button>
+											echo '<button type="submit" class="submit">Login</button>
 										</form> 
 									';
 
@@ -48,12 +45,12 @@ $description = 'Admin Panel';
 							?>
 						
 						<!-- Links -->
-							<div class="fb-admin-links flex">
+							<div class="admin-links">
 								<a href="/admin/add-post">Add Post</a> | <a href="/admin/sitemap-gen">Sitemap Generator</a>
 							</div>
 
 						<!-- Table of Posts -->
-							<div class="fb-table-responsive">
+							<div class="table-responsive">
 								<table>
 									<thead>
 										<tr>

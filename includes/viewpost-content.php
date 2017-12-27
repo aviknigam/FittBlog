@@ -60,54 +60,58 @@ $date_post = "Published: " .date('jS F Y', strtotime($row['created_at']));
                 <?php include('navbar.php'); ?>
 
             <!-- Content -->
-                    <div class="post" itemscope itemtype="http://schema.org/NewsArticle">
-                        <h1 class="post-lead"><?= $title ?></h1>
+                <div class="post" itemscope itemtype="http://schema.org/NewsArticle">
+                    <h1 class="post-lead"><?= $title ?></h1>
+
+                    <div class="addthis_inline_share_toolbox mt-4"></div>
+                    
+                    <div class="mt-4"><?= $date_post; "<br/>"; ?></div>
+
+                    <!-- Image -->
+                        <?php 
+                            if(empty($row['postImage'])) {
+                                echo "<img class='img-fluid mt-4' src='/assets/images/$row[postID].jpg'>";
+                            } else {
+                                echo "<img class='img-fluid mt-4' src='$row[postImage]'>";
+                            }
+                        ?>
+
+                        <!-- Initial Advertisement -->
+                            <div class="mt-4">
+                                <?php include 'ads-banner.php'; ?> 
+                            </div>
+
+                        <!-- Post Content -->
+                            <div class="post-content mt-4">
+                                <?php
+                                    $postAd_get = file_get_contents('../includes/ads-responsive.php');
+                                    $main_post = htmlspecialchars_decode(str_replace("postAd", $postAd_get, $row['postContent']));
+                                    echo $main_post;
+                                ?>
+                            </div>
 
                         <div class="addthis_inline_share_toolbox mt-4"></div>
-                        
-                        <div class="mt-4"><?= $date_post; "<br/>"; ?></div>
-
-                        <!-- Image -->
-                            <?php 
-                                if(empty($row['postImage'])) {
-                                    echo "<img class='img-fluid mt-4' src='/assets/images/$row[postID].jpg'>";
-                                } else {
-                                    echo "<img class='img-fluid mt-4' src='$row[postImage]'>";
-                                }
-                            ?>
-
-                            <!-- Initial Advertisement -->
-                                <div class="mt-4">
-                                    <?php include 'ads-banner.php'; ?> 
-                                </div>
-
-                            <!-- Post Content -->
-                                <div class="post-content mt-4">
-                                    <?php
-                                        $postAd_get = file_get_contents('../includes/ads-responsive.php');
-                                        $main_post = htmlspecialchars_decode(str_replace("postAd", $postAd_get, $row['postContent']));
-                                        echo $main_post;
-                                    ?>
-                                </div>
-
-                            <div class="addthis_inline_share_toolbox mt-4"></div>
-                            <div class="mt-4">
-                                <?php include 'ads-responsive.php'; ?> 
-                            </div>
-                        </div>
-
-                        <!-- Navigation -->
-                        <div class="post-nav flex mt-4">
-                            <?php 
-                            $next_post = $conn->query("SELECT * FROM posts WHERE postID < $row[postID] ORDER BY postID DESC LIMIT 1");
-                            $row = $next_post->fetch_assoc();
-                            ?>
-                            <a class="btn flex" <?="href='/" .$row['postCategory']. "/" .$row['postSlug']. "'";?>>Next Post <i class="fas fa-chevron-right"></i></a>
+                        <div class="mt-4">
+                            <?php include 'ads-responsive.php'; ?> 
                         </div>
                     </div>
+
+                    <!-- Navigation -->
+                    <div class="post-nav flex mt-4">
+                        <?php 
+                        $next_post = $conn->query("SELECT * FROM posts WHERE postID < $row[postID] ORDER BY postID DESC LIMIT 1");
+                        $row = $next_post->fetch_assoc();
+                        ?>
+                        <a class="btn flex" <?="href='/" .$row['postCategory']. "/" .$row['postSlug']. "'";?>>Next Post <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Footer -->
+                <?php include('includes/footer.php'); ?>
             
         <!-- Scripts -->
             <?php include('scripts.php'); ?>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59d590f7f3ad1af4"></script>  
     </body>
 </html>

@@ -1,44 +1,51 @@
-.admin-section {
-    background-color: #f8f9fa;
+.container {
+    width: 90%;
+    max-width: 90%;
 }
 
 /* Admin Login */
-    .fb-login-form {
+    .admin {
         flex-flow: column wrap;
-        margin-top: 15%;
         align-items: center;
     }
 
-    .fb-form-field {
+    .login-form {
+        flex-flow: column wrap;
+        margin-top: 10%;
+        justify-content: center;
+    }
+
+    .form-field {
         align-items: center;
         width: 30%;
     }
 
-    .fb-submit {
+    .submit {
         
     }
 
 /* Admin Links */
-    .fb-admin-links {
+    .admin-links {
         flex-flow: row wrap;
         justify-content: center;
         padding-top: 20px;
         padding-bottom: 20px;
     }
 
-    .fb-admin-links a {
+    .admin-links a {
         padding-left: 10px;
         padding-right: 10px;
     }
 
 /* Posts Table */
-    .fb-table-responsive {
+    .table-responsive {
+        background: #f8f9fa;
         display: block;
         overflow-x: auto;
         width: 100%;
     }
 
-    .fb-table-responsive table {
+    .table-responsive table {
         background-color: transparent;
         border-collapse: collapse;
         width: 100%;
@@ -46,7 +53,7 @@
         margin-bottom: 1rem;
     }
 
-    .fb-table-responsive table thead th {
+    .table-responsive table thead th {
         border-bottom: 2px solid #eceeef;
         border-top: 1px solid #eceeef;
         padding: .75rem;
@@ -54,16 +61,20 @@
         
     }
 
-    .fb-table-responsive table tbody tr:nth-of-type(odd) {
+    .table-responsive table tbody tr:nth-of-type(odd) {
         background-color: #ffffff;
     }
 
-    .fb-table-responsive table tbody td {
+    .table-responsive table tbody td {
         border-top: 1px solid #eceeef;
         padding: .75rem;
     }
 
 /*********** ADD POST **********/
+#postDescription {
+    width: 100%;
+}
+
 .error {
     color: #721c24;
     background-color: #f8d7da;
@@ -76,6 +87,6 @@
     position: relative;
 }
 
-.fb-form-group {
-    margin-bottom: 10px;
+.form-group {
+    margin-bottom: 15px;
 }
