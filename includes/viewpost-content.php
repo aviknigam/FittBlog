@@ -78,7 +78,7 @@ $date_post = "Published: " .date('jS F Y', strtotime($row['created_at']));
 
                         <!-- Initial Advertisement -->
                             <div class="mt-4">
-                                <?php include 'ads-banner.php'; ?> 
+                                <?php include 'ads-responsive.php'; ?> 
                             </div>
 
                         <!-- Post Content -->
