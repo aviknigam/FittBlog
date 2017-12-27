@@ -108,7 +108,7 @@ $date_post = "Published: " .date('jS F Y', strtotime($row['created_at']));
             </div>
 
             <!-- Footer -->
-                <?php include('includes/footer.php'); ?>
+                <?php include('footer.php'); ?>
             
         <!-- Scripts -->
             <?php include('scripts.php'); ?>
