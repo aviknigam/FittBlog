@@ -1,97 +1,65 @@
-/* Extra small devices (portrait phones, less than 576px) */
-/* No media query since this is the default in Bootstrap */
+	@media (min-width: 392px) {
+		.container {
+			width: 360px;
+			max-width: 360px;
+		}
+	}
+	
+	@media (min-width: 425px) {
+		.container {
+			width: 395px;
+			max-width: 395px;
+		}
+		
+		.feature-slide {
+			height: 198px;
+		}
+	}
+	
+	@media (min-width: 520px) {
+		.container {
+			width: 490px;
+			max-width: 490px;
+		}
+
+		.feature-slide {
+			height: 242px;
+		}
+
+		.article-img {
+			width: 95px;
+		}
+	}
 
 /* Small devices (landscape phones, 576px and up) */
 	@media (min-width: 576px) {
-		.fb-nav-logo {
-			height: 90px;
+		
+	}
+
+	@media (min-width: 620px) {
+		.container {
+			width: 590px;
+			max-width: 590px;
 		}
 
-		.fb-card {
-			height: 550px;
-			width: 32%;
-		}
-
-		.fb-card img {
-			height: 300px;
+		.feature-slide {
+			height: 296px;
 		}
 	}
 	
 /* Medium devices (tablets, 768px and up) */
 	@media (min-width: 768px) {
-		.fb-nav {
-			position: fixed;
-			top: 0;
-			width: 100%;
-		}
-
-		.fb-nav a {
-			margin-left: 125px;
-		}
-
-		.fb-container {
-			margin-top: 112px;			
-		}
-
-		.fb-sidebar {
-			background: #111;
-			color: #FFF;
-			display: block;
-			height: 100%;
-			position: fixed;
-			width: 125px;
-		}
-		
-		.fb-sidebar ul {
-			color: #FFF;
-			font-size: 16px;
-			line-height: 1.15;			
-			list-style: none;
-			padding: 15px 0;
-		}
-
-		.fb-sidebar ul li {
-			text-align: center;			
-		}
-
-		.fb-sidebar ul li a {
-			display: block;
-			padding: 15px 0;
-		}
-
-		.fb-sidebar a:hover {
-			background: #FFF;
-			color: #2baad8;
-		}
-		
-		.fb-main-content {
-			margin-left: 125px;
-		}
-
-		.fb-posts {
-			justify-content: space-between;
-			padding: 0 2rem;
+		.nav-logo img {
+			height: 113px;;
 		}
 	}
 
 /* Large devices (desktops, 992px and up) */
 	@media (min-width: 992px) {
-		.fb-posts {
-			justify-content: space-around;
-			padding: 0 4rem;			
-		}
-
-		.fb-card {
-			height: 500px;
-			width: 29%;
-		}
 
 	}
 
 /* Extra large devices (large desktops, 1200px and up) */
 	@media (min-width: 1200px) {
-		.fb-posts {
-			justify-content: space-around;
-			padding: 0 6rem;			
-		}
+
 	}

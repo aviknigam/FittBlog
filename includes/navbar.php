@@ -4,7 +4,7 @@
         <span class="date">
             <?php
             date_default_timezone_set('Australia/Sydney');
-            echo date('jS F Y', strtotime("now")); 
+            echo date('l, jS \of F Y', strtotime("now")); 
             ?>
         </span>
     </div>

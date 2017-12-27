@@ -11,14 +11,13 @@ html {
 
 body {
 	background: #FFF;
-	font-family: "Varela Round", Arial, "Helvetica Neue", Helvetica, serif;
+	font-family: Arial, serif;
 	font-size: 16px;
 	height: 100%;
 }
 
 a {
 	color: #2baad8;
-	font-weight: bold;
 	text-decoration: none;
 }
 
@@ -44,7 +43,7 @@ a {
 /* Navbar */
 	.navbar {
 		display: block;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 
 	.masthead {
@@ -68,6 +67,88 @@ a {
 	}
 
 /* Content */
+	.primary-left {
+
+	}
+
+	.feature {
+		background: #efefef;
+		border: 1px solid #dddddd;
+		border-radius: 4px;
+		padding: 10px;
+	}
+	
+	.feature-slide {
+		position: relative;
+		height: 182px;
+		margin: auto;
+		overflow: hidden;
+		width: 100%;
+
+	}
+	
+	.feature-slide img {
+		width: 100%;
+	}
+	
+	.feature-caption {
+		background: rgba(0,0,0,0.6);
+		bottom: 0;
+		left: 0;
+		color: #fff;
+		font-family: serif;
+		font-size: 22px;
+		font-weight: normal;
+		margin: 0;
+		padding: 10px;
+		position: absolute;
+		z-index: 2;
+	}
+	
+	.catname {
+		color: #cd1713;
+		font-size: 22px;
+		font-weight: bold;
+		margin-top: 15px;
+	}
+
+	.recent {
+
+	}
+
+	.recent-article {
+		border-bottom: 1px solid #efefef;
+		border-top: none;
+		clear: both;
+		float: none;
+		margin: 0 0 10px;
+		overflow: hidden;
+		padding: 0 0 7px;
+		width: 100%;
+	}
+	
+	.recent-article a {
+		color: #333333;
+	}
+
+	.article-img {
+		width: 80px;
+		float: left;
+		margin-right: 10px;
+		margin-top: 2px;
+		margin-bottom: 3px;
+	}
+
+	.article-h2 {
+		color: #0058cc;
+		font-size: 22px;
+		font-family: serif;
+		margin: 0;
+	}
+
+	.article-p {
+
+	}
 	
 /* Cards */
 	
