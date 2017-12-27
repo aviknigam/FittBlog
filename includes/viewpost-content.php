@@ -36,11 +36,12 @@ if(empty($row['postImage'])) {
 
 
 // Check updated vs created date
-if($row['updated_at'] > $row['created_at']) {
-    $date_post = "Published: " .date('jS F Y', strtotime($row['created_at'])). " | Updated: " . date('jS F Y', strtotime($row['updated_at']));
-} else {
-    $date_post = "Published: " .date('jS F Y', strtotime($row['created_at']));
-}
+// if($row['updated_at'] > $row['created_at']) {
+//     $date_post = "Published: " .date('jS F Y', strtotime($row['created_at'])). " | Updated: " . date('jS F Y', strtotime($row['updated_at']));
+// } else {
+//     $date_post = "Published: " .date('jS F Y', strtotime($row['created_at']));
+// }
+$date_post = "Published: " .date('jS F Y', strtotime($row['created_at']));
 
 // ----------- GENERAL WEBPAGE ------------------------------
 ?>
@@ -53,33 +54,31 @@ if($row['updated_at'] > $row['created_at']) {
     </head>
     
     <body>
-        <!-- Navbar -->
-            <?php include 'navbar.php'; ?>
-        
-        <!-- Container -->
-            <div class="fb-container flex">
-                <!-- Sidebar -->
-                    <?php include 'sidebar.php'; ?>
-            
-                <!-- Main Content -->
-                    <div class="fb-main-content flex">
-                        <h1 class="fb-heading"><?= $title ?></h1>
+        <!-- Main Content -->
+			<div class="container">
+            <!-- Navbar -->
+                <?php include('navbar.php'); ?>
 
-                        <div class="fb-viewpost">
-                            <span><?= $date_post; "<br/>"; ?></span>
-                            <div class="addthis_inline_share_toolbox mt-4"></div>
+            <!-- Content -->
+                    <div class="post" itemscope itemtype="http://schema.org/NewsArticle">
+                        <h1 class="post-lead"><?= $title ?></h1>
 
-                            <!-- Image -->
-                                <?php 
-                                    if(empty($row['postImage'])) {
-                                        echo "<img class='img-fluid mt-4' src='/assets/images/$row[postID].jpg'>";
-                                    } else {
-                                        echo "<img class='img-fluid mt-4' src='$row[postImage]'>";
-                                    }
-                                ?>
+                        <div class="addthis_inline_share_toolbox mt-4"></div>
+                        
+                        <div class="mt-4"><?= $date_post; "<br/>"; ?></div>
+
+                        <!-- Image -->
+                            <?php 
+                                if(empty($row['postImage'])) {
+                                    echo "<img class='img-fluid mt-4' src='/assets/images/$row[postID].jpg'>";
+                                } else {
+                                    echo "<img class='img-fluid mt-4' src='$row[postImage]'>";
+                                }
+                            ?>
+
                             <!-- Initial Advertisement -->
                                 <div class="mt-4">
-                                    <?php include 'ads-responsive.php'; ?> 
+                                    <?php include 'ads-banner.php'; ?> 
                                 </div>
 
                             <!-- Post Content -->

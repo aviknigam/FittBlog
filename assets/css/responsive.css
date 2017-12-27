@@ -22,6 +22,10 @@
 			max-width: 490px;
 		}
 
+		.nav-logo img {
+			height: 100px;
+		}
+
 		.feature-slide {
 			height: 242px;
 		}
@@ -49,8 +53,21 @@
 	
 /* Medium devices (tablets, 768px and up) */
 	@media (min-width: 768px) {
+		.container {
+			width: 750px;
+			max-width: 750px;
+		}
+		
 		.nav-logo img {
-			height: 113px;;
+			height: 115px;
+		}
+		
+		.feature-slide {
+			height: 350px;
+		}
+
+		.feature-caption {
+			font-size: 35px;
 		}
 	}
 

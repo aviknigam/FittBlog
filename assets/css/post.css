@@ -1,34 +1,25 @@
 /* Blog Posts */
-.fb-main-content {
-	background: #f2f4f8;
+.post {
+	/* background: #f2f4f8; */
 }
 
-.fb-viewpost {
-	padding: 0 2rem;
-}
-
-@media (min-width: 576px) {
-	.fb-viewpost {
-		padding: 0 4rem;
-	}
-}
-
-@media (min-width: 768px) {
-	.fb-viewpost {
-		padding: 0 6rem;
-	}
-}
-
-
-h3 {
-	font-size: 42px; 
-	color: #2f2c2c; 
-	font-weight: 400;
-	margin: 0px;
+/* Post Heading */
+.post-lead {
+	border-bottom: 1px solid #efefef;
+	font-family: arial;
+    margin-bottom: 20px;
 }
 
 .post-content h3 {
+	font-size: 42px; 
+	color: #2f2c2c; 
+	font-weight: 400;
 	margin: 25px auto 10px auto;
+}
+
+/* Override Normalize.css */
+.post-content h3 strong {
+	font-weight: normal;
 }
 
 .post-content img, .img-fluid {
@@ -48,7 +39,6 @@ p, ul {
 	font-size: 20px; 
 	color: #2B2B2B;
 	line-height: 36px;
-	text-align: justify;
 }
 
 .post-nav {
