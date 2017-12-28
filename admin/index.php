@@ -46,7 +46,7 @@ $description = 'Admin Panel';
 						
 						<!-- Links -->
 							<div class="admin-links">
-								<a href="/admin/add-post">Add Post</a> | <a href="/admin/sitemap-gen">Sitemap Generator</a>
+								<a href="/admin/add-post">Add Post</a> | <a href="/admin/sitemap-gen">Sitemap Generator</a> | <a href="/admin/logout">Logout</a>
 							</div>
 
 						<!-- Table of Posts -->
