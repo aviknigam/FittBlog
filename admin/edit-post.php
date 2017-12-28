@@ -124,7 +124,7 @@ $description = 'Edit Post';
 								</div>
 								<div class="form-group">
 									<label for="postDescription">Description</label><br />
-									<input  type="text" class="form-field" id="postDescription" name="postDescription" value='<?php if(isset($error)){ echo $_POST['postDescription'];} else { echo $row['postDescription'];}?>'>
+									<input  type="text" class="form-field" id="postDescription" name="postDescription" value="<?php if(isset($error)){ echo $_POST['postDescription'];} else { echo $row['postDescription'];}?>">
 								</div>
 								<div class="form-group">
 									<label for="postContent">Content</label><br />

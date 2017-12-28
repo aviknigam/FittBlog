@@ -30,7 +30,8 @@
 @media (min-width: 576px) {
 	.post-content img, .img-fluid {
 		display: block;
-		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
 		width: 50%;
 	}
 }
