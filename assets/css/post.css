@@ -36,7 +36,7 @@
 	}
 }
 
-p, ul {
+p, ul, ol {
 	font-size: 20px; 
 	color: #2B2B2B;
 	line-height: 36px;
