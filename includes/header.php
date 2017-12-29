@@ -3,13 +3,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title><?= 'FittBlog | ' . $title; ?></title>
-<!-- <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=kPg5dmjPmB">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=kPg5dmjPmB">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=kPg5dmjPmB">
-<link rel="manifest" href="manifest.json?v=kPg5dmjPmB">
-<link rel="mask-icon" href="safari-pinned-tab.svg?v=kPg5dmjPmB" color="#3a004d">
-<link rel="shortcut icon" href="favicon.ico?v=kPg5dmjPmB">
-<meta name="theme-color" content="#ffffff"> -->
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png?v=OmyRYkgGad">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png?v=OmyRYkgGad">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png?v=OmyRYkgGad">
+<link rel="manifest" href="/assets/favicons/manifest.json?v=OmyRYkgGad">
+<link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg?v=OmyRYkgGad" color="#915bd5">
+<link rel="shortcut icon" href="/assets/favicons/favicon.ico?v=OmyRYkgGad">
+<meta name="apple-mobile-web-app-title" content="FittBlog">
+<meta name="application-name" content="FittBlog">
+<meta name="msapplication-config" content="/assets/favicons/browserconfig.xml?v=OmyRYkgGad">
+<meta name="theme-color" content="#ffffff">
 
 <meta name="description" content="<?= $description ?>"/>
 <meta name="author" content="FittBlog" />
