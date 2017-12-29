@@ -56,25 +56,25 @@ $date_post = "Published: " .date('jS F Y', strtotime($row['created_at']));
     <body>
         <!-- Main Content -->
 			<div class="container">
-            <!-- Navbar -->
-                <?php include('navbar.php'); ?>
+                <!-- Navbar -->
+                    <?php include('navbar.php'); ?>
 
-            <!-- Content -->
-                <div class="post" itemscope itemtype="http://schema.org/NewsArticle">
-                    <h1 class="post-lead"><?= $title ?></h1>
+                <!-- Post -->
+                    <div class="post" itemscope itemtype="http://schema.org/NewsArticle">
+                        <h1 class="post-lead"><?= $title ?></h1>
 
-                    <div class="addthis_inline_share_toolbox mt-4"></div>
-                    
-                    <div class="mt-4"><?= $date_post; "<br/>"; ?></div>
+                        <div class="addthis_inline_share_toolbox mt-4"></div>
+                        
+                        <div class="mt-4"><?= $date_post; "<br/>"; ?></div>
 
-                    <!-- Image -->
-                        <?php 
-                            if(empty($row['postImage'])) {
-                                echo "<img class='img-fluid mt-4' src='/assets/images/$row[postID].jpg'>";
-                            } else {
-                                echo "<img class='img-fluid mt-4' src='$row[postImage]'>";
-                            }
-                        ?>
+                        <!-- Image -->
+                            <?php 
+                                if(empty($row['postImage'])) {
+                                    echo "<img class='img-fluid mt-4' src='/assets/images/$row[postID].jpg'>";
+                                } else {
+                                    echo "<img class='img-fluid mt-4' src='$row[postImage]'>";
+                                }
+                            ?>
 
                         <!-- Initial Advertisement -->
                             <div class="mt-4">
@@ -96,7 +96,7 @@ $date_post = "Published: " .date('jS F Y', strtotime($row['created_at']));
                         </div>
                     </div>
 
-                    <!-- Navigation -->
+                <!-- Navigation -->
                     <div class="post-nav flex mt-4">
                         <?php 
                         $next_post = $conn->query("SELECT * FROM posts WHERE postID < $row[postID] ORDER BY postID DESC LIMIT 1");
@@ -104,14 +104,30 @@ $date_post = "Published: " .date('jS F Y', strtotime($row['created_at']));
                         ?>
                         <a class="btn flex" <?="href='/" .$row['postCategory']. "/" .$row['postSlug']. "'";?>>Next Post <i class="fas fa-chevron-right"></i></a>
                     </div>
-                </div>
+
+                <!-- Footer -->
+                    <?php include('footer.php'); ?>
+                
+                <!-- Disqus -->
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://fittblogger.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the comments powered by Disqus.</a></noscript>
             </div>
 
-            <!-- Footer -->
-                <?php include('footer.php'); ?>
             
         <!-- Scripts -->
-            <?php include('scripts.php'); ?>
-            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59d590f7f3ad1af4"></script>  
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59d590f7f3ad1af4" async></script>
+            <script id="dsq-count-scr" src="//fittblogger.disqus.com/count.js" async></script>
     </body>
 </html>

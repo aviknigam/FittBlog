@@ -85,7 +85,6 @@ $description = "Health and fitness stories from around the world. Inspirational 
 			</div>				
 
 		<!-- Scripts -->
-			<?php include('includes/scripts.php'); ?>
 			<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59d590f7f3ad1af4"></script>  
 	</body>
 </html>

@@ -146,6 +146,5 @@ $description = 'Add Post';
 			<?php include('../includes/editor.php'); ?>
 		
 		<!-- Scripts -->
-			<?php include('../includes/scripts.php'); ?>
 	</body>
 </html>

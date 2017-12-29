@@ -93,7 +93,6 @@ $description = 'Admin Panel';
 							</div>
 
 		<!-- Scripts -->
-			<?php include('../includes/scripts.php'); ?>
 			
 	</body>
 </html>
