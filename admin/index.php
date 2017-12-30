@@ -70,7 +70,7 @@ $description = 'Admin Panel';
 													
 													echo '<tr>';
 													echo '<td>' .$row['postID']. '</td>';
-													echo '<td><a href="/fitness/' . $row['postSlug']. '">'.$row['postTitle'].'</a></td>';
+													echo '<td><a href="/' .$row['postCategory']. '/' .$row['postSlug']. '">'.$row['postTitle'].'</a></td>';
 													echo '<td>'.date('jS M Y', strtotime($row['created_at'])).'</td>';
 													?>
 
