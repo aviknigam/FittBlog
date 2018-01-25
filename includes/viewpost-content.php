@@ -16,7 +16,7 @@ $result = $stmt->get_result();
 
 // Exit if we cannot find the post in SQL
 if(!$result->num_rows > 0) {
-    header("Location: /404");
+	header("Location: /404");
     exit;
 }
 

@@ -1,7 +1,7 @@
 <?php
 
 function sanitize($data) {
-	$conn = mysqli_connect("localhost", "root", "", "fitness");
+	$conn = mysqli_connect("localhost", "produser", "prodpass", "fitness");
 	return mysqli_real_escape_string($conn, $data);
 }
 
